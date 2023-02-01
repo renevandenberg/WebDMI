@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<style>
+		   body{
+		    margin: 0;
+			background: #000022;
+			font-family: sans-serif;
+		   }
+		   
+		   #section-a{
+		    position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -200px;
+			width: 400px;
+		    height: 400px;
+			}
+		   
+		   .needle{
+		     position: absolute;
+			 width: 8px;
+			 height: 150px;
+			 left: 196px;
+			 top: 50px;
+			 background: white;
+			 transform-origin: bottom;
+			 animation: needle 15s;
+		   }
+		   .speed{
+		     position: absolute;
+			 width: 30px;
+			 height: 30px;
+			 left: 180px;
+			 top: 180px;
+			 border-radius: 20px;
+			 background: white;
+			 line-height: 30px;
+			 text-align: right;
+			 padding: 5px;
+			 font-weight: bold;
+			 font-size: 20px;
+			 text-overflow: visible;
+		   }
+		   .stripe{
+		     position: absolute;
+			 width: 4px;
+			 height: 20px;
+			 left: 198px;
+			 top: 10px;
+			 background: white;
+			 transform-origin: 50% 950%;
+		   }
+		   .minor .stripe{
+			 width: 2px;
+			 height: 10px;
+			 left: 199px;
+			 top: 10px;
+			 background: white;
+			 transform-origin: 50% 1900%;
+		   }
+		   .major .stripe:nth-of-type(1){ transform: rotate(-120deg) }
+		   .major .stripe:nth-of-type(2){ transform: rotate(-80deg) }
+		   .major .stripe:nth-of-type(3){ transform: rotate(-40deg) }
+		   .major .stripe:nth-of-type(4){ transform: rotate(0deg) }
+		   .major .stripe:nth-of-type(5){ transform: rotate(40deg) }
+		   .major .stripe:nth-of-type(6){ transform: rotate(80deg) }
+		   .major .stripe:nth-of-type(7){ transform: rotate(120deg) }
+		   
+		   .minor .stripe:nth-of-type(1){ transform: rotate(-112deg) }
+		   .minor .stripe:nth-of-type(2){ transform: rotate(-104deg) }
+		   .minor .stripe:nth-of-type(3){ transform: rotate(-96deg) }
+		   .minor .stripe:nth-of-type(4){ transform: rotate(-88deg) }
+		   
+		   .minor .stripe:nth-of-type(5){ transform: rotate(-72deg) }
+		   .minor .stripe:nth-of-type(6){ transform: rotate(-64deg) }
+		   .minor .stripe:nth-of-type(7){ transform: rotate(-56deg) }
+		   .minor .stripe:nth-of-type(8){ transform: rotate(-48deg) }
+		   
+		   .minor .stripe:nth-of-type(9){ transform: rotate(-32deg) }
+		   .minor .stripe:nth-of-type(10){ transform: rotate(-24deg) }
+		   .minor .stripe:nth-of-type(11){ transform: rotate(-16deg) }
+		   .minor .stripe:nth-of-type(12){ transform: rotate(-8deg) }
+		   
+		   .minor .stripe:nth-of-type(13){ transform: rotate(8deg) }
+		   .minor .stripe:nth-of-type(14){ transform: rotate(16deg) }
+		   .minor .stripe:nth-of-type(15){ transform: rotate(24deg) }
+		   .minor .stripe:nth-of-type(16){ transform: rotate(32deg) }
+		   
+		   .minor .stripe:nth-of-type(17){ transform: rotate(48deg) }
+		   .minor .stripe:nth-of-type(18){ transform: rotate(56deg) }
+		   .minor .stripe:nth-of-type(19){ transform: rotate(64deg) }
+		   .minor .stripe:nth-of-type(20){ transform: rotate(72deg) }
+		   
+		   .minor .stripe:nth-of-type(21){ transform: rotate(88deg) }
+		   .minor .stripe:nth-of-type(22){ transform: rotate(96deg) }
+		   .minor .stripe:nth-of-type(23){ transform: rotate(104deg) }
+		   .minor .stripe:nth-of-type(24){ transform: rotate(112deg) }
+		   @keyframes needle {
+				0%, 10%{
+					transform: rotate(-120deg);
+				}
+				40%, 50%{
+					transform: rotate(10deg);
+				}
+				70%{
+					transform: rotate(-10deg);
+				}
+				100%{
+					transform: rotate(120deg);
+				}
+		   }
+		   .arc{
+		   
+		   }
+		   </style>
+	</head>
+	<body>
+		<div id="section-a">
+			<span class="needle"></span>
+			<span class="speed">121</span>
+				<div class="major">
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+				</div>
+				<div class="minor">
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+					<span class="stripe"></span><span class="stripe"></span><span class="stripe"></span><span class="stripe"></span>
+				</div>
+				<svg style="stroke:#aaa; fill:none; stroke-width:6px" width="400" height="400">
+					<path d=" M  30   298  A  196 196 0 1 1 393 166" />
+				</svg>
+		</div>
+	</body>
+</html>
